@@ -1,11 +1,11 @@
-//// Midterm code for 59CST112
+///// Midterm code for 59CST112
 float left,right,top,bottom;
 float middle;
 
 float cueX,cueY,cueDX,cueDY;
-float redX,redY,redDX,redDY;
-float yelX,yelY,yelDX,yelDY;
-float bluX,bluY,bluDX,bluDY;
+float orangeX,orangeY,orangeDX,orangeDY;
+float purpleX,purpleY,purpleDX,purpleDY;
+float greenX,greenY,greenDX,greenDY;
 
 
 
@@ -24,14 +24,14 @@ void reset(){
   
   //random positions
   cueX=random(middle,right); cueY=random(top,bottom);
-  redX=random(middle,right); redY=random(top,bottom);
-  yelX=random(middle,right); yelY=random(top,bottom);
-  bluX=random(middle,right); bluY=random(top,bottom);
+  orangeX=random(middle,right); orangeY=random(top,bottom);
+ purpleX=random(middle,right); purpleY=random(top,bottom);
+ greenX=random(middle,right); greenY=random(top,bottom);
   
   //random speed
-  redDX= random(1,3); redDY=random(1,3);
-  yelDX=random(1,3); yelDY=random(1,3);
-  bluDX=random(1,3); bluDY=random(1,3);
+ orangeDX= random(1,3); orangeDY=random(1,3);
+  purpleDX=random(1,3); purpleDY=random(1,3);
+  greenDX=random(1,3); greenDY=random(1,3);
 }
 
 void draw(){
@@ -42,24 +42,31 @@ void draw(){
  
   bounce();
     show();
+    collision();
 
 }
 
 void bounce(){
-if((redDX>width) ||(redX<0));
-if((yelDX>width)||(yelX<0));
-if((bluDX>width)||(bluX<0));
+  orangeX=  orangeX + orangeDX;
+  if((orangeX>width) ||(orangeX<0))
+    ;
+    purpleX= purpleX+purpleDX;
+  if((purpleX>width)||(purpleX<0))
+    ;
+    greenX= greenX +greenDX;
+  if((greenX>width)||(greenX<0))
+    ;
 }
 
 //show balls
 void show(){
   fill(255);     ellipse(cueX,cueY,30,30);
   
- fill(255,0,0);  ellipse(redX,redY,30,30);
+ fill(204,110,0);  ellipse(orangeX,orangeY,30,30);
   
- fill(255,255,20); ellipse(yelX,yelY,30,30);
+ fill(90,80,250); ellipse(purpleX,purpleY,30,30);
   
- fill(90,90,220); ellipse(bluX,bluY,30,30);
+ fill(50,200,0); ellipse(greenX,greenY,30,30);
   
 
 
