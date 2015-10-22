@@ -1,5 +1,5 @@
 //// Midterm code for 59CST112
-loat left,right,top,bottom;
+float left,right,top,bottom;
 float middle;
 
 float cueX,cueY,cueDX,cueDY;
