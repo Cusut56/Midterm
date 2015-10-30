@@ -31,11 +31,11 @@ void reset(){
   //random positions
   cueX=random(middle,right); cueY=random(top,bottom);
   orangeX=random(middle,right); orangeY=random(top,bottom);
- purpleX=random(middle,right); purpleY=random(top,bottom);
- greenX=random(middle,right); greenY=random(top,bottom);
+  purpleX=random(middle,right); purpleY=random(top,bottom);
+  greenX=random(middle,right); greenY=random(top,bottom);
   
   //random speed
- orangeDX= random(2,3); orangeDY=random(1,3);
+  orangeDX= random(2,3); orangeDY=random(1,3);
   purpleDX=random(1,3); purpleDY=random(1,3);
   greenDX=random(1,3); greenDY=random(1,3);
 }
@@ -75,9 +75,12 @@ void draw(){
 //collision(){
 float tmp;{
 //Swap velocities!
-if (dist (purpleX, purpleY, orangeX, orangeY) <50){
+if (dist (purpleX, purpleY, orangeX, orangeY) <100){
   tmp=orangeDX;orangeDX=purpleDY; purpleDX=tmp;
   tmp=orangeDY; orangeDY=purpleDY; purpleDX=tmp;
+if(dist(purpleX,purpleY,greenX,greenY))<100
+ tmp=purpleDX;purpleDX=greenDY;greenDX=tmp:
+ tmp=purpleDY;purpleDY=greenDY;greenDY=tmp
  
 }
 
