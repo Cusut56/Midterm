@@ -1,7 +1,6 @@
-
 ///// Midterm code for 59CST112
 float left,right,top,bottom;
-float middle;
+
 
 float cueX,cueY,cueDX,cueDY;
 float orangeX,orangeY,orangeDX,orangeDY;
@@ -61,6 +60,11 @@ void draw(){
     
 
 }
+if(wall)
+float middle=x+y/2;              //wall
+  stroke(0,127,0);
+line(middle,top+5,middle,bottom-5);
+}
 
   void bounce(){
  
@@ -77,10 +81,8 @@ float tmp;{
 //Swap velocities!
 if (dist (purpleX, purpleY, orangeX, orangeY) <100){
   tmp=orangeDX;orangeDX=purpleDY; purpleDX=tmp;
-  tmp=orangeDY; orangeDY=purpleDY; purpleDX=tmp;
-if(dist(purpleX,purpleY,greenX,greenY))<100
- tmp=purpleDX;purpleDX=greenDY;greenDX=tmp:
- tmp=purpleDY;purpleDY=greenDY;greenDY=tmp
+
+
  
 }
 
