@@ -1,6 +1,3 @@
-///// Midterm code for 59CST112
-float left,right,top,bottom;
-float middle;
 float tmp;
 
 float cueX,cueY,cueDX,cueDY;
@@ -50,15 +47,15 @@ void reset(){
   void draw(){
     x=x+speed;
     
-  if ((orangeDX < width) || (orangeDX>1)){
+  if ((orangeDX < width) || (orangeDX>30)){
 speed = speed * -1;
   }
   
-if((purpleDX> width)||(purpleDX<0)){
+if((purpleDX> width)||(purpleDX<30)){
 speed=speed*-1;
 }
 
-if((greenDX>width)|| (greenDX<0)){
+if((greenDX>width)|| (greenDX<30)){
 speed=speed*-1;
 }
 
