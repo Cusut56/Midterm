@@ -1,5 +1,6 @@
 float tmp;
-
+float left,right,top,bottom;
+float middle;
 float cueX,cueY,cueDX,cueDY;
 float orangeX,orangeY,orangeDX,orangeDY;
 float purpleX,purpleY,purpleDX,purpleDY;
