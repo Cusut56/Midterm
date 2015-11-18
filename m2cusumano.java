@@ -76,8 +76,9 @@ speed=speed*-1;
     
     
 
-  stroke(0,127,0);
-  line(middle,top+10,middle,bottom-10);
+ 
+  line(middle,top+20,middle,bottom+10);
+   stroke(0,127,0);
   }
   
   
