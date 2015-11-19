@@ -1,3 +1,4 @@
+
 ///// Midterm code for 59CST112
  float left,right,top,bottom;
  float middle;
@@ -27,11 +28,14 @@ right= width-75;
  void reset(){
    cueX=left +(right-left)/2;
    cueY=top+(bottom-top)/2;
-
+   
+   cueX=random(middle,right); cueY=random(top,bottom);
   greenX=random(middle,right); greenY=random(top,bottom);
+  orangeX=random(middle,right); orangeY=random(top,bottom);
+  purpleX=random(middle,right); purpleY=random(top,bottom);
    
    //random speed
- orangeDX= random(1,3); orangeDY=random(1,3);
+   cueDX=random(1,3); cueDY=random(1,3); 
  orangeDX= random(1,3); orangeDY=random(1,3);
    purpleDX=random(1,3); purpleDY=random(1,3);
    greenDX=random(1,3); greenDY=random(1,3);
